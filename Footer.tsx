@@ -53,7 +53,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-4 lg:mb-0">
             <div className="mb-4">
-              <GirlBossLogo size="footer" variant="stacked" showTagline={false} />
+                <GirlBossLogo size="footer" variant="stacked" showTagline={false} framed />
             </div>
             <p className="text-sm text-brand-black/50 leading-relaxed max-w-xs font-medium">
               Gym wear, crop tops, baby tees, co-ords, bandanas & biker tees

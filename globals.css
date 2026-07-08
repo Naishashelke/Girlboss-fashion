@@ -15,67 +15,95 @@
   }
 
   ::selection {
-    background-color: #ffd6e8;
-    color: #111111;
+    background-color: #ff4d8d;
+    color: #ffffff;
   }
 }
 
 @layer components {
-  /* GirlBoss logo — pink script "Girl" over black "BOSS" */
+  /* GirlBoss — pink script "Girl" over black "BOSS" (reference lockup) */
   .girlboss-boss-bg {
     font-family: var(--font-anton), Impact, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #0a0a0a;
-    letter-spacing: 0.04em;
-    line-height: 0.82;
-    -webkit-text-stroke: 1.5px #ffffff;
+    letter-spacing: 0.06em;
+    line-height: 0.8;
+    -webkit-text-stroke: 2.5px #ffffff;
     paint-order: stroke fill;
-    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.9));
+    filter: drop-shadow(0 2px 0 rgba(255, 255, 255, 1))
+      drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  }
+
+  .girlboss-boss-on-dark {
+    color: #ffffff;
+    -webkit-text-stroke: 2px #0a0a0a;
+    filter: drop-shadow(0 2px 12px rgba(255, 77, 141, 0.25));
   }
 
   .girlboss-girl-overlay {
     display: flex;
     align-items: center;
-    gap: 0.35em;
+    gap: 0.2em;
     pointer-events: none;
+    z-index: 2;
   }
 
   .girlboss-girl-script {
     font-family: var(--font-script), "Brush Script MT", cursive;
     color: #ff4d8d;
     line-height: 1;
-    transform: rotate(-4deg);
-    text-shadow: 0 0 12px rgba(255, 77, 141, 0.15);
+    transform: rotate(-5deg);
+    font-weight: 400;
+    text-shadow: 0 1px 8px rgba(255, 77, 141, 0.35);
   }
 
   .girlboss-accent-line {
     display: block;
-    height: 1.5px;
-    width: 0.85em;
+    height: 2px;
     background-color: #ff4d8d;
     flex-shrink: 0;
   }
 
-  /* Stacked variant — inspired by editorial lockups */
+  .girlboss-accent-line-left {
+    width: 1.1em;
+  }
+
+  .girlboss-accent-line-right {
+    width: 1.1em;
+  }
+
+  /* Stacked — Girl / BOSS editorial */
   .girlboss-stacked-girl {
     font-family: var(--font-script), cursive;
     color: #ff4d8d;
     line-height: 1;
-    letter-spacing: 0.08em;
-    transform: rotate(-2deg);
+    letter-spacing: 0.1em;
+    transform: rotate(-3deg);
+    margin-bottom: -0.15em;
   }
 
   .girlboss-stacked-boss {
     font-family: var(--font-anton), Impact, sans-serif;
     text-transform: uppercase;
     color: #0a0a0a;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
   }
 
   .girlboss-o-accent {
     color: #ff4d8d;
-    text-shadow: 0 0 18px rgba(255, 77, 141, 0.35);
+    text-shadow: 0 0 24px rgba(255, 77, 141, 0.5);
+  }
+
+  /* Black frame for high contrast (logo only) */
+  .girlboss-frame-dark {
+    background: #0a0a0a;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  .girlboss-frame {
+    border: 2px solid rgba(255, 77, 141, 0.35);
   }
 
   .section-label {

@@ -46,9 +46,9 @@ export default function Navbar() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           aria-label="Main navigation"
         >
-          <div className="flex items-center justify-between h-20 lg:h-24">
+          <div className="flex items-center justify-between h-24 lg:h-28">
             <a href="#home" aria-label="GirlBoss — Home" className="shrink-0">
-              <GirlBossLogo size="nav" />
+              <GirlBossLogo size="nav" framed />
             </a>
 
             <ul className="hidden xl:flex items-center gap-5">
@@ -114,7 +114,7 @@ export default function Navbar() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-8 pt-28">
-                <GirlBossLogo size="footer" className="mb-10" />
+                <GirlBossLogo size="footer" variant="overlay" framed className="mb-10" />
                 <ul className="space-y-1">
                   {navLinks.map((link, i) => (
                     <motion.li
